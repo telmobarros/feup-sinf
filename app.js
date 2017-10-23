@@ -23,7 +23,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/artigos', artigos);
+app.use('/clientes', clientes);
+app.use('/compras', compras);
+app.use('/encomendas', encomendas);
+app.use('/fornecedores', fornecedores);
+app.use('/vendas', vendas);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
