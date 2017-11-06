@@ -6,7 +6,13 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var artigos = require('./routes/artigos');
+var clientes = require('./routes/clientes');
+var compras = require('./routes/compras');
+var encomendas = require('./routes/encomendas');
+var fornecedores = require('./routes/fornecedores');
+var vendas = require('./routes/vendas');
+var ganhos = require('./routes/ganhos');
 
 var app = express();
 
@@ -29,6 +35,12 @@ app.use('/compras', compras);
 app.use('/encomendas', encomendas);
 app.use('/fornecedores', fornecedores);
 app.use('/vendas', vendas);
+app.use('/ganhos', ganhos);
+
+// 
+app.use('/css/gentelella.min.css', express.static(path.join(__dirname, '/node_modules/gentelella/build/css/custom.min.css')));
+app.use('/js/gentelella.min.js', express.static(path.join(__dirname,'/node_modules/gentelella/build/js/custom.min.js')));
+app.use('/vendors', express.static(path.join(__dirname, '/node_modules/gentelella/vendors')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
