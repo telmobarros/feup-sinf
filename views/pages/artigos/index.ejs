@@ -13,9 +13,17 @@
       <% include ../../partials/sidebar %>
       <% include ../../partials/topnav %>
 
+
+      <!--Iterar html pelo conteudo da variavel  artigos definida em routes/artigos.js-->
     <!-- page content -->
     <div class="right_col" role="main">
+      <p>
+        <% artigos.forEach(function(art){ %>
+          <%= art.CodArtigo %>
+          <br/>
+        <% }); %>
 
+      </p>
     </div>
     <!-- /page content -->
 
@@ -29,4 +37,3 @@
 </body>
 
 </html>
-
