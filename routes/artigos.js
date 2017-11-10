@@ -4,7 +4,7 @@ const request = require('request');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  request('http://192.168.43.22:49822/api/artigos/',{json:true},function(err, response, body)
+  request('http://192.168.1.149:49822/api/artigos/',{json:true},function(err, response, body)
   {
     //if(err)
       //{res.status(400)};
