@@ -4,7 +4,11 @@ const request = require('request');
 
 /* GET lista todos artigos. */
 router.get('/', function(req, res, next) {
+<<<<<<< HEAD
+  request('http://192.168.1.149:49822/api/artigos/',{json:true},function(err, response, body)
+=======
   request('http://localhost:49822/api/artigos/',{json:true},function(err, response, body)
+>>>>>>> 015a0ac31968c6dd96b551dda6ad1ba47f9b6c0c
   {
     if(err) {res.status(400)}
     console.log(body);
