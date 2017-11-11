@@ -1,10 +1,16 @@
 var express = require('express');
 var router = express.Router();
+const request = require('request');
 
 /* GET lista todas as compras. */
 router.get('/', function (req, res, next) {
     if (req.session.login) {
-        res.render('pages/compras/index');
+		request.post({url: 'http://' + req.session.address + '/api/DocCompra/', form: req.session.login}, function (err, response, body) {
+            if (err) { res.status(400).send() }
+            console.log(JSON.parse(body));
+            console.log(err);
+			res.render('pages/compras/index', { compras: JSON.parse(body) });
+		});
     } else {
         res.redirect('/login');
     }

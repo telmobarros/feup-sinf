@@ -1,10 +1,16 @@
 var express = require('express');
 var router = express.Router();
+const request = require('request');
 
 /* GET lista todos os fornecedores. */
 router.get('/', function (req, res, next) {
     if (req.session.login) {
-        res.render('pages/fornecedores/index');
+		request.post({url: 'http://' + req.session.address + '/api/Fornecedor/', form: req.session.login}, function (err, response, body) {
+            if (err) { res.status(400).send() }
+			console.log(JSON.parse(body));
+			console.log(err);
+			res.render('pages/fornecedores/index', { fornecedores: JSON.parse(body) });
+		});
     } else {
         res.redirect('/login');
     }
@@ -13,7 +19,12 @@ router.get('/', function (req, res, next) {
 /* GET informacao sobre o fornecedor. */
 router.get('/:fornecedorID', function (req, res, next) {
     if (req.session.login) {
-        res.render('pages/fornecedores/show');
+		request.post({ url: 'http://' + req.session.address + '/api/Fornnecedor/' + req.params.fornecedorID, form: req.session.login }, function (err, response, body) {
+            if (err) { res.status(400).send() }
+            console.log(body);
+            console.log(err);
+			res.render('pages/fornecedores/show', { fornecedor: JSON.parse(body) });
+		});
     } else {
         res.redirect('/login');
     }
