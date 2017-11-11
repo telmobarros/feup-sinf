@@ -19,7 +19,7 @@ router.get('/', function (req, res, next) {
 /* GET informacao sobre o fornecedor. */
 router.get('/:fornecedorID', function (req, res, next) {
     if (req.session.login) {
-		request.post({ url: 'http://' + req.session.address + '/api/Fornnecedor/' + req.params.fornecedorID, form: req.session.login }, function (err, response, body) {
+		request.post({ url: 'http://' + req.session.address + '/api/Fornecedor/' + req.params.fornecedorID, form: req.session.login }, function (err, response, body) {
             if (err) { res.status(400).send() }
             console.log(body);
             console.log(err);
