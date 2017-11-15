@@ -49,6 +49,20 @@ router.post('/login', function (req, res, next) {
     }
 });
 
+/* POST refresh saft. */
+router.post('/refresh', function (req, res, next) {
+    if (req.session.login) {
+        request.post({ url: 'http://' + req.session.address + '/api/parser/' + req.body.saftPath, form: req.session.login }, function (err, response, body) {
+            if (err) { res.status(400).send() }
+            console.log(JSON.parse(body));
+            console.log(err);
+            res.redirect('/');
+        });
+    } else {
+        res.redirect('/login');
+    }
+});
+
 /* GET logout. */
 router.get('/logout', function (req, res, next) {
     req.session.destroy(function (err) {
