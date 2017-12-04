@@ -79,7 +79,6 @@
                           <th class="column-title">Número Documento</th>
                           <th class="column-title">Data</th>
                           <th class="column-title">Total Mercadoria</th>
-                          <th class="column-title">Serie</th>
                           <th class="column-title">Linhas Documento</th>
                         </tr>
                       </thead>
@@ -87,12 +86,11 @@
                       <tbody>
                         <% vendas.forEach(function(ven){ %>
                           <tr>
-                            <td><a href="/vendas/<%= ven.id %>"><%= ven.id %></a></td>
-                            <td><%= ven.Entidade %></td>
+                            <td><a href="/vendas/<%= ven.InvoiceNo %>"><%= ven.InvoiceNo %></a></td>
+                            <td><a href="/clientes/<%= ven.CustomerID %>"><%= ven.CustomerID %></a></td>
                             <td><%= ven.NumDoc %></td>
-                            <td><%= ven.Data %></td>
-                            <td><%= ven.TotalMerc %></td>
-                            <td><%= ven.Serie %></td>
+                            <td><%= ven.InvoiceDate %></td>
+                            <td><%= ven.GrossTotal %></td>
 							<td>
 								<% (ven.LinhasDoc).forEach(function(lin){ %>
 									<%= lin.CodArtigo %>
