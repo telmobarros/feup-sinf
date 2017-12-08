@@ -22,7 +22,6 @@ router.get('/:clienteID', function (req, res, next) {
     if (req.session.login) {
 		request.post({ url: 'http://' + req.session.address + '/api/Clientes/' + req.params.clienteID, form: req.session.login }, function (err, response, body) {
             if (err) { res.status(400).send() }
-            console.log(body);
             console.log(err);
 			res.render('pages/clientes/show', { cliente: JSON.parse(body) });
 		});
