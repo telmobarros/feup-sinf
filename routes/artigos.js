@@ -23,9 +23,12 @@ router.get('/:codArtigo', function (req, res, next) {
     if (req.session.login) {
         request.post({ url: 'http://' + req.session.address + '/api/artigos/' + req.params.codArtigo, form: req.session.login }, function (err, response, body) {
             if (err) { res.status(400).send() }
-            console.log(body);
-            console.log(err);
-            res.render('pages/artigos/show', { artigo: JSON.parse(body) });
+            //console.log(body);
+            //console.log(err);
+            var artigo = JSON.parse(body);
+            artigo.vendas = [];
+            artigo.compras = [];
+            res.render('pages/artigos/show', { artigo: artigo });
         })
     } else {
         res.redirect('/login');

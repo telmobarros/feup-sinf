@@ -5,7 +5,10 @@ const request = require('request');
 /* GET home page. */
 router.get('/', function (req, res, next) {
     if (req.session.login) {
-        res.render('pages/index');
+        request.post({ url: 'http://' + req.session.address + '/api/DocVenda/', form: req.session.login }, function (err, response, body) {
+            if (err) { res.status(400).send() }
+            res.render('pages/index', { vendas: JSON.parse(body) });
+        });
     } else {
         res.redirect('/login');
     }

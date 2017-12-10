@@ -86,12 +86,11 @@
                         <div class="col-sm-4 invoice-col">
                           Para
                           <address>
-                                          <a href="/clientes/<%= venda.CustomerID %>"><strong><%= venda.CustomerID %></strong></a>
-                                          <br>795 Freedom Ave, Suite 600
-                                          <br>New York, CA 94107
-                                          <br>Phone: 1 (804) 123-9876
-                                          <br>Email: jon@ironadmin.com
-                                      </address>
+                            <a href="/clientes/<%= venda.CustomerID %>"><strong><%= venda.dadosCliente.NomeCliente %> (<%= venda.CustomerID %>)</strong></a>
+                            <br>Morada: <%= venda.dadosCliente.Morada %>
+                            <br>NIF: <%= venda.dadosCliente.NumContribuinte %>
+                            <br>Email: <%= venda.dadosCliente.Email %>
+                        </address>
                         </div>
                         <!-- /.col -->
                       </div>
@@ -131,7 +130,7 @@
                         <!-- accepted payments column -->
                         <div class="col-xs-6">
 							<button class="btn btn-default btn-block" onclick="window.print();"><i class="fa fa-print"></i> Imprimir</button>
-                         <button class="btn btn-primary btn-block" style="margin-right: 5px;"><i class="fa fa-download"></i> Download PDF</button>
+                         <button class="btn btn-primary btn-block" style="margin-right: 5px;" disabled><i class="fa fa-download"></i> Download PDF</button>
                         </div>
                         <!-- /.col -->
                         <div class="col-xs-6">
