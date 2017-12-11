@@ -1,441 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <% include ../../partials/head %>
-  <!-- NProgress -->
-  <link href="/vendors/nprogress/nprogress.css" rel="stylesheet">
-  <link href="/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-
-    <% include ../../partials/post_head %>
-
-</head>
-
-<body class="nav-md">
-<div class="container body">
-  <div class="main_container">
-      <% include ../../partials/sidebar %>
-      <% include ../../partials/topnav %>
-
-    <!-- page content -->
-    <div class="right_col" role="main">
-      <div class="">
-        <div class="row top_tiles">
-          <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <div class="tile-stats">
-              <div class="icon"><i class="fa fa-truck"></i></div>
-              <div class="count">20</div>
-              <h3>Encomendas em trânsito</h3>
-              <p>Lorem ipsum psdea itgum rixt.</p>
-            </div>
-          </div>
-          <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <div class="tile-stats">
-              <div class="icon"><i class="fa fa-clock-o"></i></div>
-              <div class="count">2</div>
-              <h3>Encomendas em atraso</h3>
-              <p>Lorem ipsum psdea itgum rixt.</p>
-            </div>
-          </div>
-          <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <div class="tile-stats">
-              <div class="icon"><i class="fa  fa-euro "></i></div>
-              <div class="count">200.27</div>
-              <h3>Gastos este mês</h3>
-              <p>Lorem ipsum psdea itgum rixt.</p>
-            </div>
-          </div>
-          <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <div class="tile-stats">
-              <div class="icon"><i class="fa  fa-euro "></i></div>
-              <div class="count">50</div>
-              <h3>Dividas fornecedores</h3>
-              <p>Lorem ipsum psdea itgum rixt.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-12">
-            <div class="x_panel">
-              <div class="x_title">
-                <h2>Gastos mensais </h2>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                  <div class="demo-container" style="height:280px">
-                    <div id="chart_plot_02" class="demo-placeholder"></div>
-                  </div>
-
-
-                </div>
-
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="row">
-
-
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="x_panel tile fixed_height_320">
-              <div class="x_title">
-                <h2>Transacções - Ultimos 5 messes</h2>
-                <ul class="nav navbar-right panel_toolbox">
-                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#">Settings 1</a>
-                      </li>
-                      <li><a href="#">Settings 2</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a class="close-link"><i class="fa fa-close"></i></a>
-                  </li>
-                </ul>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-                <div class="widget_summary">
-                  <div class="w_left w_25">
-                    <span>Jan</span>
-                  </div>
-                  <div class="w_center w_55">
-                    <div class="progress">
-                      <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
-                        <span class="sr-only">60% Complete</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w_right w_20">
-                    <span>123k</span>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-
-                <div class="widget_summary">
-                  <div class="w_left w_25">
-                    <span>Feb</span>
-                  </div>
-                  <div class="w_center w_55">
-                    <div class="progress">
-                      <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
-                        <span class="sr-only">60% Complete</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w_right w_20">
-                    <span>53k</span>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="widget_summary">
-                  <div class="w_left w_25">
-                    <span>Mar</span>
-                  </div>
-                  <div class="w_center w_55">
-                    <div class="progress">
-                      <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
-                        <span class="sr-only">60% Complete</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w_right w_20">
-                    <span>23k</span>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="widget_summary">
-                  <div class="w_left w_25">
-                    <span>Abr</span>
-                  </div>
-                  <div class="w_center w_55">
-                    <div class="progress">
-                      <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
-                        <span class="sr-only">60% Complete</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w_right w_20">
-                    <span>3k</span>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="widget_summary">
-                  <div class="w_left w_25">
-                    <span>Mai</span>
-                  </div>
-                  <div class="w_center w_55">
-                    <div class="progress">
-                      <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
-                        <span class="sr-only">60% Complete</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w_right w_20">
-                    <span>1k</span>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="x_panel tile fixed_height_320 overflow_hidden">
-              <div class="x_title">
-                <h2>Estado encomendas</h2>
-                <ul class="nav navbar-right panel_toolbox">
-                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#">Settings 1</a>
-                      </li>
-                      <li><a href="#">Settings 2</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a class="close-link"><i class="fa fa-close"></i></a>
-                  </li>
-                </ul>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-                <div id="echart_pie" style="height:250px;"></div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="x_panel tile fixed_height_320">
-              <div class="x_title">
-                <h2>Localização fornecedores  </h2>
-                <ul class="nav navbar-right panel_toolbox">
-                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#">Settings 1</a>
-                      </li>
-                      <li><a href="#">Settings 2</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a class="close-link"><i class="fa fa-close"></i></a>
-                  </li>
-                </ul>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-                <div class="dashboard-widget-content">
-                  <div id="world-map-gdp" style="height:230px;"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-
-
-        <div class="row">
-          <div class="col-md-6">
-            <div class="x_panel">
-              <div class="x_title">
-                <h2>Top forncedores</h2>
-                <ul class="nav navbar-right panel_toolbox">
-                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#">Settings 1</a>
-                      </li>
-                      <li><a href="#">Settings 2</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a class="close-link"><i class="fa fa-close"></i></a>
-                  </li>
-                </ul>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-                <article class="media event">
-                  <a class="pull-left border-aero profile_thumb">
-                    <i class="fa fa-user aero"></i>
-                  </a>
-                  <div class="media-body">
-                    <a class="title" href="#">Item One Title</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </article>
-                <article class="media event">
-                  <a class="pull-left border-aero profile_thumb">
-                    <i class="fa fa-user aero"></i>
-                  </a>
-                  <div class="media-body">
-                    <a class="title" href="#">Item Two Title</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </article>
-                <article class="media event">
-                  <a class="pull-left border-aero profile_thumb">
-                    <i class="fa fa-user aero"></i>
-                  </a>
-                  <div class="media-body">
-                    <a class="title" href="#">Item Two Title</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </article>
-                <article class="media event">
-                  <a class="pull-left border-aero profile_thumb">
-                    <i class="fa fa-user aero"></i>
-                  </a>
-                  <div class="media-body">
-                    <a class="title" href="#">Item Two Title</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </article>
-                <article class="media event">
-                  <a class="pull-left border-aero profile_thumb">
-                    <i class="fa fa-user aero"></i>
-                  </a>
-                  <div class="media-body">
-                    <a class="title" href="#">Item Three Title</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="x_panel">
-              <div class="x_title">
-                <h2>Top encomendas</h2>
-                <ul class="nav navbar-right panel_toolbox">
-                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#">Settings 1</a>
-                      </li>
-                      <li><a href="#">Settings 2</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a class="close-link"><i class="fa fa-close"></i></a>
-                  </li>
-                </ul>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-                <article class="media event">
-                  <a class="pull-left border-aero profile_thumb">
-                    <i class="fa fa-user aero"></i>
-                  </a>
-                  <div class="media-body">
-                    <a class="title" href="#">Item One Title</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </article>
-                <article class="media event">
-                  <a class="pull-left border-aero profile_thumb">
-                    <i class="fa fa-user aero"></i>
-                  </a>
-                  <div class="media-body">
-                    <a class="title" href="#">Item Two Title</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </article>
-                <article class="media event">
-                  <a class="pull-left border-aero profile_thumb">
-                    <i class="fa fa-user aero"></i>
-                  </a>
-                  <div class="media-body">
-                    <a class="title" href="#">Item Two Title</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </article>
-                <article class="media event">
-                  <a class="pull-left border-aero profile_thumb">
-                    <i class="fa fa-user aero"></i>
-                  </a>
-                  <div class="media-body">
-                    <a class="title" href="#">Item Two Title</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </article>
-                <article class="media event">
-                  <a class="pull-left border-aero profile_thumb">
-                    <i class="fa fa-user aero"></i>
-                  </a>
-                  <div class="media-body">
-                    <a class="title" href="#">Item Three Title</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!-- /page content -->
-
-  </div>
-
-</div>
-
-<% include ../../partials/footer %>
-<!-- FastClick -->
-<script src="/vendors/fastclick/lib/fastclick.js"></script>
-<!-- NProgress -->
-<script src="/vendors/nprogress/nprogress.js"></script>
-<!-- Chart.js -->
-<script src="/vendors/Chart.js/dist/Chart.min.js"></script>
-<!-- jQuery Sparklines -->
-<script src="/vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-<!-- Flot -->
-<script src="/vendors/Flot/jquery.flot.js"></script>
-<script src="/vendors/Flot/jquery.flot.pie.js"></script>
-<script src="/vendors/Flot/jquery.flot.time.js"></script>
-<script src="/vendors/Flot/jquery.flot.stack.js"></script>
-<script src="/vendors/Flot/jquery.flot.resize.js"></script>
-<!-- Flot plugins -->
-<script src="/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-<script src="/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-<script src="/vendors/flot.curvedlines/curvedLines.js"></script>
-<!-- DateJS -->
-<script src="/vendors/DateJS/build/date.js"></script>
-<!-- bootstrap-daterangepicker -->
-<script src="/vendors/moment/min/moment.min.js"></script>
-<script src="/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-<script src="/vendors/echarts/dist/echarts.min.js"></script>
-<script src="/vendors/echarts/map/js/world.js"></script>
-<!-- JQVMap -->
-<script src="/vendors/jqvmap/dist/jquery.vmap.js"></script>
-<script src="/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-<script src="/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-<!-- bootstrap-progressbar -->
-<script src="/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-<% include ../../partials/post_footer %>
-</body>
-
+	
+	<head>
+		<% include ../../partials/head %>
+		<!-- NProgress -->
+		<link href="/vendors/nprogress/nprogress.css" rel="stylesheet">
+		<link href="/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+		
+		<% include ../../partials/post_head %>
+		
+	</head>
+	
+	<body class="nav-md">
+		<div class="container body">
+			<div class="main_container">
+				<% include ../../partials/sidebar %>
+				<% include ../../partials/topnav %>
+				
+				<!-- page content -->
+				<div class="right_col" role="main">
+					<div class="">
+						<div class="row top_tiles">
+							<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+								<div class="tile-stats">
+									<div class="icon"><i class="fa fa-truck"></i></div>
+									<div class="count">20</div>
+									<h3>Encomendas em trânsito</h3>
+									<p>Lorem ipsum psdea itgum rixt.</p>
+								</div>
+							</div>
+							<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+								<div class="tile-stats">
+									<div class="icon"><i class="fa fa-clock-o"></i></div>
+									<div class="count">2</div>
+									<h3>Encomendas em atraso</h3>
+									<p>Lorem ipsum psdea itgum rixt.</p>
+								</div>
+							</div>
+							<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+								<div class="tile-stats">
+									<div class="icon"><i class="fa  fa-euro "></i></div>
+									<div class="count">200.27</div>
+									<h3>Gastos este mês</h3>
+									<p>Lorem ipsum psdea itgum rixt.</p>
+								</div>
+							</div>
+							<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+								<div class="tile-stats">
+									<div class="icon"><i class="fa  fa-euro "></i></div>
+									<div class="count">50</div>
+									<h3>Dividas fornecedores</h3>
+									<p>Lorem ipsum psdea itgum rixt.</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-md-12">
+								<div class="x_panel">
+									<div class="x_title">
+										<h2>Gastos mensais </h2>
+										<div class="clearfix"></div>
+									</div>
+									<div class="x_content">
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="demo-container" style="height:280px">
+												<div id="chart_plot_02" class="demo-placeholder"></div>
+											</div>
+											
+											
+										</div>
+										
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="row">
+							
+							
+							<div class="col-md-4 col-sm-4 col-xs-12">
+								<div class="x_panel tile fixed_height_320">
+									<div class="x_title">
+										<h2>Transacções - Ultimos 5 messes</h2>
+										<ul class="nav navbar-right panel_toolbox">
+											<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+												<ul class="dropdown-menu" role="menu">
+													<li><a href="#">Settings 1</a>
+													</li>
+													<li><a href="#">Settings 2</a>
+													</li>
+												</ul>
+											</li>
+											<li><a class="close-link"><i class="fa fa-close"></i></a>
+											</li>
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<div class="x_content">
+										<div class="widget_summary">
+											<div class="w_left w_25">
+												<span>Jan</span>
+											</div>
+											<div class="w_center w_55">
+												<div class="progress">
+													<div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
+														<span class="sr-only">60% Complete</span>
+													</div>
+												</div>
+											</div>
+											<div class="w_right w_20">
+												<span>123k</span>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										
+										<div class="widget_summary">
+											<div class="w_left w_25">
+												<span>Feb</span>
+											</div>
+											<div class="w_center w_55">
+												<div class="progress">
+													<div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+														<span class="sr-only">60% Complete</span>
+													</div>
+												</div>
+											</div>
+											<div class="w_right w_20">
+												<span>53k</span>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<div class="widget_summary">
+											<div class="w_left w_25">
+												<span>Mar</span>
+											</div>
+											<div class="w_center w_55">
+												<div class="progress">
+													<div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+														<span class="sr-only">60% Complete</span>
+													</div>
+												</div>
+											</div>
+											<div class="w_right w_20">
+												<span>23k</span>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<div class="widget_summary">
+											<div class="w_left w_25">
+												<span>Abr</span>
+											</div>
+											<div class="w_center w_55">
+												<div class="progress">
+													<div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
+														<span class="sr-only">60% Complete</span>
+													</div>
+												</div>
+											</div>
+											<div class="w_right w_20">
+												<span>3k</span>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<div class="widget_summary">
+											<div class="w_left w_25">
+												<span>Mai</span>
+											</div>
+											<div class="w_center w_55">
+												<div class="progress">
+													<div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+														<span class="sr-only">60% Complete</span>
+													</div>
+												</div>
+											</div>
+											<div class="w_right w_20">
+												<span>1k</span>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-4 col-sm-4 col-xs-12">
+								<div class="x_panel tile fixed_height_320 overflow_hidden">
+									<div class="x_title">
+										<h2>Estado encomendas</h2>
+										<ul class="nav navbar-right panel_toolbox">
+											<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+												<ul class="dropdown-menu" role="menu">
+													<li><a href="#">Settings 1</a>
+													</li>
+													<li><a href="#">Settings 2</a>
+													</li>
+												</ul>
+											</li>
+											<li><a class="close-link"><i class="fa fa-close"></i></a>
+											</li>
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<div class="x_content">
+										<div id="echart_pie" style="height:250px;"></div>
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="col-md-4 col-sm-4 col-xs-12">
+								<div class="x_panel tile fixed_height_320">
+									<div class="x_title">
+										<h2>Localização fornecedores  </h2>
+										<ul class="nav navbar-right panel_toolbox">
+											<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+												<ul class="dropdown-menu" role="menu">
+													<li><a href="#">Settings 1</a>
+													</li>
+													<li><a href="#">Settings 2</a>
+													</li>
+												</ul>
+											</li>
+											<li><a class="close-link"><i class="fa fa-close"></i></a>
+											</li>
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<div class="x_content">
+										<div class="dashboard-widget-content">
+											<div id="world-map-gdp" style="height:230px;"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						
+						
+						<div class="row">
+							<div class="col-md-6">
+								<div class="x_panel">
+									<div class="x_title">
+										<h2>Top forncedores</h2>
+										<ul class="nav navbar-right panel_toolbox">
+											<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+												<ul class="dropdown-menu" role="menu">
+													<li><a href="#">Settings 1</a>
+													</li>
+													<li><a href="#">Settings 2</a>
+													</li>
+												</ul>
+											</li>
+											<li><a class="close-link"><i class="fa fa-close"></i></a>
+											</li>
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<div class="x_content">
+										<article class="media event">
+											<a class="pull-left border-aero profile_thumb">
+												<i class="fa fa-user aero"></i>
+											</a>
+											<div class="media-body">
+												<a class="title" href="#">Item One Title</a>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div>
+										</article>
+										<article class="media event">
+											<a class="pull-left border-aero profile_thumb">
+												<i class="fa fa-user aero"></i>
+											</a>
+											<div class="media-body">
+												<a class="title" href="#">Item Two Title</a>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div>
+										</article>
+										<article class="media event">
+											<a class="pull-left border-aero profile_thumb">
+												<i class="fa fa-user aero"></i>
+											</a>
+											<div class="media-body">
+												<a class="title" href="#">Item Two Title</a>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div>
+										</article>
+										<article class="media event">
+											<a class="pull-left border-aero profile_thumb">
+												<i class="fa fa-user aero"></i>
+											</a>
+											<div class="media-body">
+												<a class="title" href="#">Item Two Title</a>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div>
+										</article>
+										<article class="media event">
+											<a class="pull-left border-aero profile_thumb">
+												<i class="fa fa-user aero"></i>
+											</a>
+											<div class="media-body">
+												<a class="title" href="#">Item Three Title</a>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-6">
+								<div class="x_panel">
+									<div class="x_title">
+										<h2>Top encomendas</h2>
+										<ul class="nav navbar-right panel_toolbox">
+											<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+												<ul class="dropdown-menu" role="menu">
+													<li><a href="#">Settings 1</a>
+													</li>
+													<li><a href="#">Settings 2</a>
+													</li>
+												</ul>
+											</li>
+											<li><a class="close-link"><i class="fa fa-close"></i></a>
+											</li>
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<div class="x_content">
+										<article class="media event">
+											<a class="pull-left border-aero profile_thumb">
+												<i class="fa fa-user aero"></i>
+											</a>
+											<div class="media-body">
+												<a class="title" href="#">Item One Title</a>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div>
+										</article>
+										<article class="media event">
+											<a class="pull-left border-aero profile_thumb">
+												<i class="fa fa-user aero"></i>
+											</a>
+											<div class="media-body">
+												<a class="title" href="#">Item Two Title</a>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div>
+										</article>
+										<article class="media event">
+											<a class="pull-left border-aero profile_thumb">
+												<i class="fa fa-user aero"></i>
+											</a>
+											<div class="media-body">
+												<a class="title" href="#">Item Two Title</a>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div>
+										</article>
+										<article class="media event">
+											<a class="pull-left border-aero profile_thumb">
+												<i class="fa fa-user aero"></i>
+											</a>
+											<div class="media-body">
+												<a class="title" href="#">Item Two Title</a>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div>
+										</article>
+										<article class="media event">
+											<a class="pull-left border-aero profile_thumb">
+												<i class="fa fa-user aero"></i>
+											</a>
+											<div class="media-body">
+												<a class="title" href="#">Item Three Title</a>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<!-- /page content -->
+				
+			</div>
+			
+		</div>
+		
+		<% include ../../partials/footer %>
+		<!-- FastClick -->
+		<script src="/vendors/fastclick/lib/fastclick.js"></script>
+		<!-- NProgress -->
+		<script src="/vendors/nprogress/nprogress.js"></script>
+		<!-- Chart.js -->
+		<script src="/vendors/Chart.js/dist/Chart.min.js"></script>
+		<!-- jQuery Sparklines -->
+		<script src="/vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+		<!-- Flot -->
+		<script src="/vendors/Flot/jquery.flot.js"></script>
+		<script src="/vendors/Flot/jquery.flot.pie.js"></script>
+		<script src="/vendors/Flot/jquery.flot.time.js"></script>
+		<script src="/vendors/Flot/jquery.flot.stack.js"></script>
+		<script src="/vendors/Flot/jquery.flot.resize.js"></script>
+		<!-- Flot plugins -->
+		<script src="/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+		<script src="/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+		<script src="/vendors/flot.curvedlines/curvedLines.js"></script>
+		<!-- DateJS -->
+		<script src="/vendors/DateJS/build/date.js"></script>
+		<!-- bootstrap-daterangepicker -->
+		<script src="/vendors/moment/min/moment.min.js"></script>
+		<script src="/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+		<script src="/vendors/echarts/dist/echarts.min.js"></script>
+		<script src="/vendors/echarts/map/js/world.js"></script>
+		<!-- JQVMap -->
+		<script src="/vendors/jqvmap/dist/jquery.vmap.js"></script>
+		<script src="/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+		<script src="/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+		<!-- bootstrap-progressbar -->
+		<script src="/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+		<% include ../../partials/post_footer %>
+	</body>
+	
 </html>
 
