@@ -50,7 +50,7 @@
 									
 									<div class="x_content">
 										
-										<table id="encomendasPendentes" class="table table-striped table-bordered bulk_action">
+										<table id="encomendasPendentesTable" class="table table-striped table-bordered bulk_action">
 											<thead>
 												<tr>
 													<th class="column-title">Cód. Encomenda</th>
@@ -89,13 +89,14 @@
 									
 									<div class="x_content">
 										
-										<table id="encomendas" class="table table-striped table-bordered bulk_action">
+										<table id="encomendasTable" class="table table-striped table-bordered bulk_action">
 											<thead>
 												<tr>
 													<th class="column-title">Cód. Encomenda</th>
 													<th class="column-title">Entidade</th>
 													<th class="column-title">Data</th>
-													<th class="column-title">Entregue</th><th class="column-title">Total Mercadoria</th>
+													<th class="column-title">Total Mercadoria</th>
+													<th class="column-title">Entregue</th>
 													
 												</tr>
 											</thead>
@@ -126,7 +127,6 @@
 		</div>
 		
 		<% include ../../partials/footer %>
-		
 		<!-- FastClick -->
 		<script src="/vendors/fastclick/lib/fastclick.js"></script>
 		<!-- NProgress -->
@@ -146,9 +146,6 @@
 		<script src="/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
 		<script src="/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
 		<script src="/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-		<script src="/vendors/jszip/dist/jszip.min.js"></script>
-		<script src="/vendors/pdfmake/build/pdfmake.min.js"></script>
-		<script src="/vendors/pdfmake/build/vfs_fonts.js"></script>
 		<script>
 			$('#encomendasPendentesTable').dataTable();
 			$('#encomendasTable').dataTable();
