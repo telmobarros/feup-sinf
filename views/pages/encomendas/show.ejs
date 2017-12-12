@@ -17,7 +17,7 @@
 					<div class="">
 						<div class="page-title">
 							<div class="title_left">
-								<h3>Ver venda</h3>
+								<h3>Ver encomenda</h3>
 							</div>
 						</div>
 						
@@ -27,7 +27,7 @@
 							<div class="col-xs-12">
 								<div class="x_panel">
 									<div class="x_title">
-										<h2><%= encomenda.InvoiceType %> <%= encomenda.InvoiceStatus %></h2>
+										<h2><%= encomenda.CodEncomenda %></h2> <!-- MUDAR -->
 										<ul class="nav navbar-right panel_toolbox">
 											<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
 											<li><a class="close-link"><i class="fa fa-close"></i></a></li>
@@ -41,8 +41,8 @@
 											<div class="row">
 												<div class="col-xs-12 invoice-header">
 													<h1>
-														<i class="fa fa-globe"></i> <%= encomenda.InvoiceNo %>
-														<small class="pull-right"><%= encomenda.InvoiceDate %></small>
+														<i class="fa fa-globe"></i> <%= encomenda.InvoiceNo %> <!-- MUDAR -->
+														<small class="pull-right"><%= encomenda.InvoiceDate %></small> <!-- MUDAR -->
 													</h1>
 												</div>
 												<!-- /.col -->
@@ -51,6 +51,15 @@
 											<div class="row invoice-info">
 												<div class="col-sm-4 invoice-col">
 													De
+													<address>
+														<a href="/clientes/<%= encomenda.Entidade %>"><strong><%= encomenda.Entidade %></strong></a>
+														<br>Morada: <%= encomenda.Entidade.Local %>
+														<br>NIF: <%= encomenda.Entidade %>
+														<br>Email: <%= encomenda.Entidade %>
+													</address>
+												</div>
+												<div class="col-sm-4 invoice-col">
+													Para
 													<address>
 														TODO INFORMACAO DA EMPRESA
 														<strong>Iron Admin, Inc.</strong>
@@ -61,15 +70,7 @@
 													</address>
 												</div>
 												<!-- /.col -->
-												<div class="col-sm-4 invoice-col">
-													Para
-													<address>
-														<a href="/clientes/<%= encomenda.CustomerID %>"><strong><%= encomenda.NomeCliente %> (<%= encomenda.CustomerID %>)</strong></a>
-														<br>Morada: <%= encomenda.Morada %>
-														<br>NIF: <%= encomenda.NumContribuinte %>
-														<br>Email: <%= encomenda.Email %>
-													</address>
-												</div>
+												
 												<!-- /.col -->
 											</div>
 											<!-- /.row -->
@@ -80,21 +81,21 @@
 													<table class="table table-striped">
 														<thead>
 															<tr>
-																<th>Qtd</th>
-																<th>Produto</th>
-																<th style="width: 59%">Description</th>
-																<th>IVA</th>
-																<th>Sub-total</th>
+																<th>Id</th>
+																<th>Cód. Artigo</th>
+																<th style="width: 59%">Desc. Artigo</th>
+																<th>Id Cabec. Doc.</th>
+																<th>Num. Linha</th>
 															</tr>
 														</thead>
 														<tbody>
 															<% (encomenda.LinhasEnc).forEach(function(linha){ %>
 															<tr>
-																<td><%= linha.Quantity %></td>
-																<td><a href="/artigos/<%= linha.ProductCode %>"><%= linha.ProductCode %></a></td>
-																<td><a href="/artigos/<%= linha.ProductCode %>"><%= linha.Description %></a></td>
-																<td><%= linha.TaxPercentage %> %</td>
-																<td class="text-right"><%= linha.UnitPrice %> &euro;</td>
+																<td><%= linha.Id %></td>
+																<td><a href="/artigos/<%= linha.CodArtigo %>"><%= linha.CodArtigo %></a></td>
+																<td><a href="/artigos/<%= linha.CodArtigo %>"><%= linha.DescArtigo %></a></td>
+																<td><%= linha.IdCabecDoc %> %</td>
+																<td class="text-right"><%= linha.NumLinha %> </td>
 															</tr>
 															<% }); %>
 														</tbody>
@@ -117,11 +118,11 @@
 															<tbody>
 																<tr>
 																	<th style="width:50%">Sub-total:</th>
-																	<td class="text-right"><%= encomenda.NetTotal %> &euro;</td>
+																	<td class="text-right"><%= encomenda.TotalMerc %> &euro;</td>
 																</tr>
 																<tr>
 																	<th>IVA</th>
-																	<td class="text-right"><%= encomenda.TaxPayable %> &euro;</td>
+																	<td class="text-right"><%= encomenda.TotalIva %> &euro;</td>
 																</tr>
 																<tr>
 																	<th>Total:</th>
