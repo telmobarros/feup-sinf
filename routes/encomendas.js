@@ -27,7 +27,7 @@ router.get('/:encomendaID', function (req, res, next) {
             if (err) { res.status(400).send() }
             console.log(body);
             console.log(err);
-			res.render('pages/encomendas/show',{ venda: JSON.parse(body) });
+			res.render('pages/encomendas/show',{ encomenda: JSON.parse(body) });
 		});
 		} else {
         res.redirect('/login');
