@@ -25,10 +25,20 @@
 				<!-- page content -->
 				<div class="right_col" role="main">
 					<div class="">
-						
-						<div class="page-title">
-							<div class="title_left">
-								<h3>Encomendas</h3>
+						<div class="row top_tiles">
+							<div class="animated flipInY col-sm-6 col-xs-12">
+								<div class="tile-stats">
+									<div class="icon"><i class="fa fa-check"></i></div>
+									<div class="count green"><%= encomendas.length %></div>
+									<h3>Encomendas</h3>
+								</div>
+							</div>
+							<div class="animated flipInY col-sm-6 col-xs-12">
+								<div class="tile-stats">
+									<div class="icon"><i class="fa fa-clock-o"></i></div>
+									<div class="count"><%= encomendasPendentes.length %></div>
+									<h3>Encomendas pendentes</h3>
+								</div>
 							</div>
 						</div>
 						

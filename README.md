@@ -14,7 +14,7 @@ set DEBUG=feup-sinf:* & npm start
 | ------------- | ------ | ----------------- |
 | Homepage  	| 100%	 | Layout final |
 | Ganhos	 	| 0%	 | Em princípio vai ser removida |
-| Compras(index)| 0%	 | Tudo hardcoded |
+| Compras(index)| 50%	 | **FALTA** ajeitar variaveis |
 | Compras(show) | 0%	 | É preciso fazer estilo cópia do vendas(show) |
 | Encomendas(index)| 100%	 | Listagem das encomendas pendentes e de todas as encomendas |
 | Encomendas(show) | 50%	 | É preciso fazer estilo cópia do vendas(show) |

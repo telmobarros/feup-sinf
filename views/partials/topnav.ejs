@@ -32,17 +32,18 @@
 </div>
 
 <div id="saftModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="saftModal" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="mySmallModalLabel">SAFT-T</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	  <span aria-hidden="true">&times;</span>
+	  </button>
+        <h4 class="modal-title">SAF-T</h4>
       </div>
       <form method="post" action="/refresh">
         <div class="modal-body">
           <div class="form-group">
+		  <label for="saftPath">Indique o caminho remoto relativo para o ficheiro SAF-T<br>(VM default: C:\Program Files\IIS Express\saft.xml)</label>
             <input type="text" class="form-control" id="saftPath" name="saftPath" placeholder="SAF-T path" />
             </div>
         </div>
