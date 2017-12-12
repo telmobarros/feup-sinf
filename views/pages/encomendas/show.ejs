@@ -52,7 +52,8 @@
 												<div class="col-sm-4 invoice-col">
 													De
 													<address>
-														<a href="/clientes/<%= encomenda.Entidade %>"><strong><%= encomenda.Entidade %></strong></a>
+														<a href="/clientes/<%= encomenda.Entidade %>"><strong><%= encomenda.Entidade 
+%></strong></a>
 														<br>Morada: <%= encomenda.Entidade.Local %>
 														<br>NIF: <%= encomenda.Entidade %>
 														<br>Email: <%= encomenda.Entidade %>
@@ -92,8 +93,10 @@
 															<% (encomenda.LinhasEnc).forEach(function(linha){ %>
 															<tr>
 																<td><%= linha.Id %></td>
-																<td><a href="/artigos/<%= linha.CodArtigo %>"><%= linha.CodArtigo %></a></td>
-																<td><a href="/artigos/<%= linha.CodArtigo %>"><%= linha.DescArtigo %></a></td>
+																<td><a href="/artigos/<%= linha.CodArtigo %>"><%= linha.CodArtigo 
+%></a></td>
+																<td><a href="/artigos/<%= linha.CodArtigo %>"><%= linha.DescArtigo 
+%></a></td>
 																<td><%= linha.IdCabecDoc %> %</td>
 																<td class="text-right"><%= linha.NumLinha %> </td>
 															</tr>
@@ -152,7 +155,9 @@
 		</div>
 		
 		<% include ../../partials/footer %>
-		
+		<script>
+	console.log(<%- JSON.stringify(encomenda) %>);
+		</script>
 		<% include ../../partials/post_footer %>
 	</body>
 	
