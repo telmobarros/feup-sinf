@@ -41,9 +41,14 @@ router.get('/:codArtigo', function (req, res, next) {
             //console.log(body);
             //console.log(err);
             var artigo = JSON.parse(body);
-            artigo.vendas = [];
-            artigo.compras = [];
-            res.render('pages/artigos/show', { artigo: artigo });
+			let tran = artigo.transaccoes
+            let vendas = tran.filter(function(obj){
+				return obj.tipo
+			});
+            let compras = tran.filter(function(obj){
+				return !obj.tipo
+			});
+            res.render('pages/artigos/show', { artigo: artigo, vendas: vendas, compras: compras });
         })
     } else {
         res.redirect('/login');
