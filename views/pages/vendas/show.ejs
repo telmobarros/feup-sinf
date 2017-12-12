@@ -42,7 +42,7 @@
 												<div class="col-xs-12 invoice-header">
 													<h1>
 														<i class="fa fa-globe"></i> <%= venda.InvoiceNo %>
-														<small class="pull-right"><%= venda.InvoiceDate %></small>
+														<small class="pull-right date"><%= venda.InvoiceDate %></small>
 													</h1>
 												</div>
 												<!-- /.col -->
@@ -52,12 +52,10 @@
 												<div class="col-sm-4 invoice-col">
 													De
 													<address>
-														TODO INFORMACAO DA EMPRESA
-														<strong>Iron Admin, Inc.</strong>
-														<br>795 Freedom Ave, Suite 600
-														<br>New York, CA 94107
-														<br>Phone: 1 (804) 123-9876
-														<br>Email: ironadmin.com
+														<strong><%= venda.dadosEmpresa.Nome %></strong>
+														<br>Morada: <%= venda.dadosEmpresa.Morada %>, <%= venda.dadosEmpresa.Local %> <%= venda.dadosEmpresa.Cp %>
+														<br>NIF: <%= venda.dadosEmpresa.NumContrib %>
+														<br>Email:
 													</address>
 												</div>
 												<!-- /.col -->
@@ -151,7 +149,9 @@
 		</div>
 		
 		<% include ../../partials/footer %>
-		
+		<script>
+			console.log(<%- JSON.stringify(venda) %>);
+		</script>
 		<% include ../../partials/post_footer %>
 	</body>
 	

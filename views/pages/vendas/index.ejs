@@ -86,7 +86,7 @@
 													<td><a href="/vendas/<%= ven.InvoiceNo %>"><%= ven.InvoiceNo %></a></td>
 													<td><a href="/clientes/<%= ven.CustomerID %>"><%= ven.CustomerID %></a></td>
 													<td><%= ven.NumDoc %></td>
-													<td><%= ven.InvoiceDate %></td>
+													<td class="date"><%= ven.InvoiceDate %></td>
 													<td><%= ven.GrossTotal %></td>
 													<td>
 														<% (ven.LinhasDoc).forEach(function(lin){ %>
@@ -112,7 +112,9 @@
 		</div>
 		
 		<% include ../../partials/footer %>
-		
+		<!-- Moment -->
+		<script src="/vendors/moment/min/moment.min.js"></script>
+		<script src="/js/date.js"></script>
 		<!-- FastClick -->
 		<script src="/vendors/fastclick/lib/fastclick.js"></script>
 		<!-- NProgress -->
@@ -134,8 +136,7 @@
 		<script src="/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
 		<script src="/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
 		<script src="/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-		<!-- Moment -->
-		<script src="/vendors/moment/min/moment.min.js"></script>
+		
 		<script>
 			$('#vendasTable').dataTable();
 			var vendas = <%- JSON.stringify(vendas) %>;
