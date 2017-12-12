@@ -23,6 +23,6 @@ set DEBUG=feup-sinf:* & npm start
 | Vendas(index)| 100%	 | Listagem de todas as vendas |
 | Vendas(show) | 100%	 | |
 | Artigos(index)| 100%	 | Listagem de todos os artigos, artigos sem stock e max stock |
-| Artigos(show) | 50%	 | **FALTA** Listagem das vendas, compras e encomendas desse artigo|
+| Artigos(show) | 100%	 | **FALTA** Listagem das vendas, compras e encomendas desse artigo|
 | Clientes(index)| 100%	 | Listagem de todos os clientes |
 | Clientes(show) | 100%	 | Listagem das vendas e artigos, gráfico com vendas ao lado do mapa |
