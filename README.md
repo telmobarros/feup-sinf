@@ -12,7 +12,7 @@ set DEBUG=feup-sinf:* & npm start
 
 | Página  		| Estado | Descrição 		|
 | ------------- | ------ | ----------------- |
-| Homepage  	| 80%	 | Layout final mas a faltar gráfico dos ganhos e quadrados da parte superior |
+| Homepage  	| 95%	 | Layout final mas a faltar gráfico dos ganhos e quadrados da parte superior |
 | Ganhos	 	| 0%	 | Em princípio vai ser removida |
 | Compras(index)| 0%	 | Tudo hardcoded |
 | Compras(show) | 0%	 | É preciso fazer estilo cópia do vendas(show) |
