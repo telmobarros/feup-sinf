@@ -22,20 +22,21 @@ router.get('/:clienteID', function (req, res, next) {
     if (req.session.login) {
 		request.post({ url: 'http://' + req.session.address + '/api/Clientes/' + req.params.clienteID, form: req.session.login }, function (err, response, body) {
             if (err) { res.status(400).send() }
-		    //console.log(err);
             var cliente = JSON.parse(body);
-            cliente.artigos = [];
+			// get dos artigos a partir dos docVenda
+            tmpArtigos = [];
             (cliente.Vendas).forEach(function(venda){
                 (venda.LinhasDoc).forEach(function (linha) {
                     //cliente.artigos.push(linha);
-                    if (typeof cliente.artigos[linha.ProductCode] == 'undefined') {
-                        cliente.artigos[linha.ProductCode] = linha;
-                        cliente.artigos[linha.ProductCode].nVendas = 1;
+                    if (typeof tmpArtigos[linha.ProductCode] == 'undefined') {
+                        tmpArtigos[linha.ProductCode] = linha;
+                        tmpArtigos[linha.ProductCode].nVendas = 1;
                     } else {
-                        cliente.artigos[linha.ProductCode].nVendas++;
+                        tmpArtigos[linha.ProductCode].nVendas++;
                     }
                 });
             });
+			cliente.artigos = Object.keys(tmpArtigos).map(function(key){return tmpArtigos[key]});
             console.log(cliente);
             res.render('pages/clientes/show', { cliente: cliente });
 		});
