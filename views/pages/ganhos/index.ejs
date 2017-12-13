@@ -37,7 +37,7 @@
 			  <% } else  {%>
 				 <div id="<%= "grossRev" + i %>" style="display: none">	
 			  <% } %>
-				<% var month = i %>		
+				<% var month = i; %>		
 						<div class="count"><%= ganhos[month].grossRevenue %>€</div>
 			    <% var diff = 200;     if(month > 0) { diff =  (ganhos[month].grossRevenue/ganhos[month-1].grossRevenue)*100 } if(diff > 100) {diff -= 100 }else {diff = -(100 - diff)} diff = Math.trunc(diff) %>
 					<span class="count_bottom"><i class= <% if (diff > 0) {%> "green" <% }else {%> "red" <% } %> > <i class= <%  if (diff > 0) {%> "fa fa-sort-asc" <% }else {%> "fa fa-sort-desc" <% } %> > </i>    <%= diff %>% </i>  From last Month</span>
@@ -271,7 +271,7 @@
 
 
 
-          <div class="row">
+        <!--  <div class="row">
 
             <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="panel panel-body">
@@ -307,7 +307,7 @@
               </div>
 
             </div>
-
+		-->
           </div>
           <div class="row">
 
