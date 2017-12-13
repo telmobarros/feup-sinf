@@ -35,6 +35,10 @@ app.use(session({
     maxAge: 3600000
 }));
 
+app.use(function(req, res, next) {
+  res.locals.login = req.session.login;
+  next();
+});
 
 app.use('/', index);
 app.use('/artigos', artigos);
@@ -50,7 +54,6 @@ app.use('/css/gentelella.min.css', express.static(path.join(__dirname, '/node_mo
 app.use('/js/gentelella.min.js', express.static(path.join(__dirname,'/node_modules/gentelella/build/js/custom.min.js')));
 app.use('/vendors', express.static(path.join(__dirname, '/node_modules/gentelella/vendors')));
 
-// catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
