@@ -79,7 +79,7 @@
 											<td><%= cli.Morada %></td>
 											<td><a href="/clientes/<%= cli.CodCliente %>"><%= cli.CodCliente %></a></td>
 											<td><a href="/clientes/<%= cli.CodCliente %>"><%= cli.NomeCliente %></a></td>
-											<td><%= cli.NumContribuinte %></td>
+											<td class="text-right"><%= cli.NumContribuinte %></td>
 											<td><%= cli.Moeda %></td>
 											<td><%= cli.Email %></td>
 										</tr>
@@ -123,6 +123,10 @@
 <script src="/vendors/jszip/dist/jszip.min.js"></script>
 <script src="/vendors/pdfmake/build/pdfmake.min.js"></script>
 <script src="/vendors/pdfmake/build/vfs_fonts.js"></script>
+
+		<script>
+			console.log(<%- JSON.stringify(clientes) %>);
+		</script>
 <% include ../../partials/post_footer %>
 </body>
 

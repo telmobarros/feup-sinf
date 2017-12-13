@@ -73,12 +73,12 @@
 													<td><%= forn.Morada %></td>
 													<td><%= forn.Local %></td>
 													<td><%= forn.Cp %></td>
-													<td><%= forn.Tel %></td>
-													<td><%= forn.Divida %></td>
-													<td><%= forn.NumContrib %></td>
+													<td class="text-right"><%= forn.Tel %></td>
+													<td class="text-right"><%= forn.Divida %> &euro;</td>
+													<td class="text-right"><%= forn.NumContrib %></td>
 													<td><%= forn.ModoPag %></td>
 													<td><a href="<%= forn.EnderecoWeb %>"><%= forn.EnderecoWeb %></a></td>
-													<td><%= forn.EncomendasPendentes %></td>
+													<td class="text-right"><%= forn.EncomendasPendentes %></td>
 												</tr>
 												<% }); %>
 											</tbody>

@@ -111,9 +111,9 @@
 													<tr>
 														<td><a href="/compras/<%= ven.iddoc %>"><%= ven.iddoc %></a></td>
 														<td><a href="/fornecedores/<%= ven.entidade %>"><%= ven.entidade %></a></td>
-														<td><%= ven.date %></td>
-														<td><%= ven.quantity %></td>
-														<td><%= ven.linha %></td>
+														<td class="date text-right"><%= ven.date %></td>
+														<td class="text-right"><%= ven.quantity %></td>
+														<td class="text-right"><%= ven.linha %></td>
 													</tr>
 													<% }); %>
 												</tbody>
@@ -162,9 +162,9 @@
 														</td> -->
 														<td><a href="/vendas/<%= ven.iddoc %>"><%= ven.iddoc %></a></td>
 														<td><a href="/clientes/<%= ven.entidade %>"><%= ven.entidade %></a></td>
-														<td><%= ven.date %></td>
-														<td><%= ven.quantity %></td>
-														<td><%= ven.linha %></td>
+														<td class="date text-right"><%= ven.date %></td>
+														<td class="text-right"><%= ven.quantity %></td>
+														<td class="text-right"><%= ven.linha %></td>
 													</tr>
 													<% }); %>
 												</tbody>
@@ -207,6 +207,10 @@
 		<script>
 			$('#comprasTable').dataTable();
 			$('#vendasTable').dataTable();
+		</script>
+		
+		<script>
+			console.log(<%- JSON.stringify(artigo) %>);
 		</script>
 		<% include ../../partials/post_footer %>
 	</body>

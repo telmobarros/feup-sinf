@@ -52,8 +52,7 @@
 												<div class="col-sm-4 invoice-col">
 													De
 													<address>
-														<a href="/clientes/<%= encomenda.Entidade %>"><strong><%= encomenda.Entidade 
-%></strong></a>
+														<a href="/clientes/<%= encomenda.Entidade %>"><strong><%= encomenda.Entidade %></strong></a>
 														<br>Morada: <%= encomenda.Entidade.Local %>
 														<br>NIF: <%= encomenda.Entidade %>
 														<br>Email: <%= encomenda.Entidade %>
@@ -62,12 +61,10 @@
 												<div class="col-sm-4 invoice-col">
 													Para
 													<address>
-														TODO INFORMACAO DA EMPRESA
-														<strong>Iron Admin, Inc.</strong>
-														<br>795 Freedom Ave, Suite 600
-														<br>New York, CA 94107
-														<br>Phone: 1 (804) 123-9876
-														<br>Email: ironadmin.com
+														<strong><%= encomenda.dadosEmpresa.Nome %></strong>
+														<br>Morada: <%= encomenda.dadosEmpresa.Morada %>, <%= encomenda.dadosEmpresa.Local %> <%= encomenda.dadosEmpresa.Cp %>
+														<br>NIF: <%= encomenda.dadosEmpresa.NumContrib %>
+														<br>Email:
 													</address>
 												</div>
 												<!-- /.col -->
@@ -79,26 +76,22 @@
 											<!-- Table row -->
 											<div class="row">
 												<div class="col-xs-12 table">
-													<table class="table table-striped">
+													<table class="table table-striped table-bordered bulk_action">
 														<thead>
 															<tr>
-																<th>Id</th>
+																<th>Quantidade</th>
 																<th>Cód. Artigo</th>
 																<th style="width: 59%">Desc. Artigo</th>
-																<th>Id Cabec. Doc.</th>
-																<th>Num. Linha</th>
+																<th>Preço Unitário</th>
 															</tr>
 														</thead>
 														<tbody>
 															<% (encomenda.LinhasEnc).forEach(function(linha){ %>
 															<tr>
-																<td><%= linha.Id %></td>
-																<td><a href="/artigos/<%= linha.CodArtigo %>"><%= linha.CodArtigo 
-%></a></td>
-																<td><a href="/artigos/<%= linha.CodArtigo %>"><%= linha.DescArtigo 
-%></a></td>
-																<td><%= linha.IdCabecDoc %> %</td>
-																<td class="text-right"><%= linha.NumLinha %> </td>
+																<td class="text-right"><%= linha.Quantidade %></td>
+																<td><a href="/artigos/<%= linha.CodArtigo %>"><%= linha.CodArtigo %></a></td>
+																<td><a href="/artigos/<%= linha.CodArtigo %>"><%= linha.DescArtigo %></a></td>
+																<td class="text-right"><%= linha.PrecoUnitario %> &euro;</td>
 															</tr>
 															<% }); %>
 														</tbody>
@@ -120,16 +113,8 @@
 														<table class="table">
 															<tbody>
 																<tr>
-																	<th style="width:50%">Sub-total:</th>
-																	<td class="text-right"><%= encomenda.TotalMerc %> &euro;</td>
-																</tr>
-																<tr>
-																	<th>IVA</th>
-																	<td class="text-right"><%= encomenda.TotalIva %> &euro;</td>
-																</tr>
-																<tr>
 																	<th>Total:</th>
-																	<td class="text-right"><%= encomenda.GrossTotal %> &euro;</td>
+																	<td class="text-right"><%= encomenda.TotalMerc %> &euro;</td>
 																</tr>
 															</tbody>
 														</table>

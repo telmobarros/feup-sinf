@@ -75,8 +75,8 @@
 												<tr>
 													<td><a href="/encomendas/<%= enc.CodEncomenda %>"><%= enc.CodEncomenda %></a></td>
 													<td><a href="/fornecedores/<%= enc.Entidade %>"><%= enc.Entidade %></a></td>
-													<td><%= enc.DataDoc %></td>
-													<td class="text-right"><%= enc.TotalMerc %></td>
+													<td class="date text-right"><%= enc.DataDoc %></td>
+													<td class="text-right"><%= enc.TotalMerc %> &euro;</td>
 												</tr>
 												<% }); %>
 											</tbody>
@@ -116,8 +116,8 @@
 												<tr>
 													<td><a href="/encomendas/<%= enc.CodEncomenda %>"><%= enc.CodEncomenda %></a></td>
 													<td><a href="/fornecedores/<%= enc.Entidade %>"><%= enc.Entidade %></a></td>
-													<td><%= enc.DataDoc %></td>
-													<td class="text-right"><%= enc.TotalMerc %></td>
+													<td class="date text-right"><%= enc.DataDoc %></td>
+													<td class="text-right"><%= enc.TotalMerc %> &euro;</td>
 													<td><%= enc.Entregue %></td>
 												</tr>
 												<% }); %>

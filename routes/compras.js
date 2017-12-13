@@ -19,7 +19,7 @@ router.get('/', function (req, res, next) {
 /* GET informacao sobre a compra. */
 router.get('/:compraID', function (req, res, next) {
     if (req.session.login) {
-		request.post({ url: 'http://' + req.session.address + '/api/Compras/' + req.params.compraID, form: req.session.login }, function (err, response, body) {
+		request.post({ url: 'http://' + req.session.address + '/api/DocCompra/' + req.params.compraID, form: req.session.login }, function (err, response, body) {
             if (err) { res.status(400).send() }
             console.log(body);
             console.log(err);

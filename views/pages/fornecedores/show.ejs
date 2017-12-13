@@ -66,7 +66,7 @@
 													<br>
 													<strong>Tel: </strong><%= fornecedor.Tel %>
 													<br>
-													<strong>Dívida: </strong><%= fornecedor.Divida %>
+													<strong>Dívida: </strong><%= fornecedor.Divida %> &euro;
 													<br>
 													<strong>NIF: </strong><%= fornecedor.NumContrib %>
 													<br>
@@ -148,9 +148,9 @@
 													<% (fornecedor.Compras).forEach(function(com){ %>
 													<tr>
 														<td><a href="/compras/<%= com.id %>"><%= com.id %></a></td>
-														<td><%= com.NumDocExterno %></td>
-														<td><%= com.Data %></td>
-														<td class="text-right"><%= com.TotalMerc %></td>
+														<td class="text-right"><%= com.NumDocExterno %></td>
+														<td class="date text-right"><%= com.Data %></td>
+														<td class="text-right"><%= com.TotalMerc %> &euro;</td>
 													</tr>
 													<% }); %>
 												</tbody>
@@ -189,8 +189,8 @@
 													<% (fornecedor.Encomendas).forEach(function(enc){ %>
 													<tr>
 														<td><a href="/encomendas/<%= enc.CodEncomenda %>"><%= enc.CodEncomenda %></a></td>
-														<td><%= enc.DataDoc %></td>
-														<td class="text-right"><%= enc.TotalMerc %></td>
+														<td class="date text-right"><%= enc.DataDoc %></td>
+														<td class="text-right"><%= enc.TotalMerc %> &euro;</td>
 														<td><%= enc.Entregue %></td>
 													</tr>
 													<% }); %>
@@ -229,7 +229,7 @@
 													<tr>
 														<td><a href="/artigos/<%= art.CodArtigo %>"><%= art.CodArtigo %></a></td>
 														<td><a href="/artigos/<%= art.CodArtigo %>"><%= art.DescArtigo %></a></td>
-														<td><%= art.nArtigos %></td>
+														<td class="text-right"><%= art.nArtigos %></td>
 													</tr>
 													<% }); %>
 												</tbody>

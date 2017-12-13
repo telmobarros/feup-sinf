@@ -17,7 +17,7 @@
 					<div class="">
 						<div class="page-title">
 							<div class="title_left">
-								<h3>Ver venda</h3>
+								<h3>Ver compra</h3>
 							</div>
 						</div>
 						
@@ -27,7 +27,7 @@
 							<div class="col-xs-12">
 								<div class="x_panel">
 									<div class="x_title">
-										<h2><%= venda.InvoiceType %> <%= venda.InvoiceStatus %></h2>
+										<h2><%= compra.CodEncomenda %></h2> <!-- MUDAR -->
 										<ul class="nav navbar-right panel_toolbox">
 											<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
 											<li><a class="close-link"><i class="fa fa-close"></i></a></li>
@@ -41,8 +41,8 @@
 											<div class="row">
 												<div class="col-xs-12 invoice-header">
 													<h1>
-														<i class="fa fa-globe"></i> <%= venda.InvoiceNo %>
-														<small class="pull-right"><%= venda.InvoiceDate %></small>
+														<i class="fa fa-globe"></i> <%= compra.InvoiceNo %> <!-- MUDAR -->
+														<small class="pull-right"><%= compra.InvoiceDate %></small> <!-- MUDAR -->
 													</h1>
 												</div>
 												<!-- /.col -->
@@ -52,24 +52,23 @@
 												<div class="col-sm-4 invoice-col">
 													De
 													<address>
-														TODO INFORMACAO DA EMPRESA
-														<strong>Iron Admin, Inc.</strong>
-														<br>795 Freedom Ave, Suite 600
-														<br>New York, CA 94107
-														<br>Phone: 1 (804) 123-9876
-														<br>Email: ironadmin.com
+														<a href="/clientes/<%= compra.Entidade %>"><strong><%= compra.Entidade %></strong></a>
+														<br>Morada: <%= compra.Entidade.Local %>
+														<br>NIF: <%= compra.Entidade %>
+														<br>Email: <%= compra.Entidade %>
 													</address>
 												</div>
-												<!-- /.col -->
 												<div class="col-sm-4 invoice-col">
 													Para
 													<address>
-														<a href="/clientes/<%= venda.CustomerID %>"><strong><%= venda.dadosCliente.NomeCliente %> (<%= venda.CustomerID %>)</strong></a>
-														<br>Morada: <%= venda.dadosCliente.Morada %>
-														<br>NIF: <%= venda.dadosCliente.NumContribuinte %>
-														<br>Email: <%= venda.dadosCliente.Email %>
+														<strong><%= compra.dadosEmpresa.Nome %></strong>
+														<br>Morada: <%= compra.dadosEmpresa.Morada %>, <%= compra.dadosEmpresa.Local %> <%= compra.dadosEmpresa.Cp %>
+														<br>NIF: <%= compra.dadosEmpresa.NumContrib %>
+														<br>Email:
 													</address>
 												</div>
+												<!-- /.col -->
+												
 												<!-- /.col -->
 											</div>
 											<!-- /.row -->
@@ -77,24 +76,22 @@
 											<!-- Table row -->
 											<div class="row">
 												<div class="col-xs-12 table">
-													<table class="table table-striped">
+													<table class="table table-striped table-bordered bulk_action">
 														<thead>
 															<tr>
-																<th>Qtd</th>
-																<th>Produto</th>
-																<th style="width: 59%">Description</th>
-																<th>IVA</th>
-																<th>Sub-total</th>
+																<th>Quantidade</th>
+																<th>Cód. Artigo</th>
+																<th style="width: 59%">Desc. Artigo</th>
+																<th>Preço Unitário</th>
 															</tr>
 														</thead>
 														<tbody>
-															<% (venda.LinhasDoc).forEach(function(linha){ %>
+															<% (compra.LinhasDoc).forEach(function(linha){ %>
 															<tr>
-																<td><%= linha.Quantity %></td>
-																<td><a href="/artigos/<%= linha.ProductCode %>"><%= linha.ProductCode %></a></td>
-																<td><a href="/artigos/<%= linha.ProductCode %>"><%= linha.Description %></a></td>
-																<td><%= linha.TaxPercentage %> %</td>
-																<td class="text-right"><%= linha.UnitPrice %> &euro;</td>
+																<td class="text-right"><%= linha.Quantidade %></td>
+																<td><a href="/artigos/<%= linha.CodArtigo %>"><%= linha.CodArtigo %></a></td>
+																<td><a href="/artigos/<%= linha.CodArtigo %>"><%= linha.DescArtigo %></a></td>
+																<td class="text-right"><%= linha.PrecoUnitario %> &euro;</td>
 															</tr>
 															<% }); %>
 														</tbody>
@@ -116,16 +113,8 @@
 														<table class="table">
 															<tbody>
 																<tr>
-																	<th style="width:50%">Sub-total:</th>
-																	<td class="text-right"><%= venda.NetTotal %> &euro;</td>
-																</tr>
-																<tr>
-																	<th>IVA</th>
-																	<td class="text-right"><%= venda.TaxPayable %> &euro;</td>
-																</tr>
-																<tr>
 																	<th>Total:</th>
-																	<td class="text-right"><%= venda.GrossTotal %> &euro;</td>
+																	<td class="text-right"><%= compra.TotalMerc %> &euro;</td>
 																</tr>
 															</tbody>
 														</table>
@@ -151,7 +140,9 @@
 		</div>
 		
 		<% include ../../partials/footer %>
-		
+		<script>
+			console.log(<%- JSON.stringify(compra) %>);
+		</script>
 		<% include ../../partials/post_footer %>
 	</body>
 	

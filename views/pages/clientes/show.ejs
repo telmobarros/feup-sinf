@@ -121,7 +121,7 @@
 														<th class="column-title">Número Documento</th>
 														<th class="column-title">Data</th>
 														<th class="column-title">Total Mercadoria</th>
-														<th class="column-title">Linhas Documento</th>
+													<!--	<th class="column-title">Linhas Documento</th> -->
 													</tr>
 												</thead>
 												
@@ -130,15 +130,15 @@
 													<tr>
 														<td><a href="/vendas/<%= ven.InvoiceNo %>"><%= ven.InvoiceNo %></a></td>
 														<td><a href="/clientes/<%= ven.CustomerID %>"><%= ven.CustomerID %></a></td>
-														<td><%= ven.NumDoc %></td>
-														<td><%= ven.InvoiceDate %></td>
-														<td><%= ven.GrossTotal %></td>
-														<td>
+														<td class="text-right"><%= ven.NumDoc %></td>
+														<td class="date text-right"><%= ven.InvoiceDate %></td>
+														<td class="text-right"><%= ven.GrossTotal %> &euro;</td>
+														<!--<td>
 															<% (ven.LinhasDoc).forEach(function(lin){ %>
 															<%= lin.CodArtigo %>
 															&#9866;
 															<% }); %>
-														</td>
+														</td> -->
 													</tr>
 													<% }); %>
 												</tbody>
@@ -176,7 +176,7 @@
 													<tr>
 														<td><a href="/artigos/<%= art.ProductCode %>"><%= art.ProductCode %></a></td>
 														<td><a href="/artigos/<%= art.ProductCode %>"><%= art.Description %></a></td>
-														<td><%= art.nVendas %></td>
+														<td class="text-right"><%= art.nVendas %></td>
 													</tr>
 													<% }); %>
 												</tbody>

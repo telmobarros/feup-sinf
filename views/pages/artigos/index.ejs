@@ -78,7 +78,7 @@
 												<tr>
 													<td><a href="/artigos/<%= art.CodArtigo %>"><%= art.CodArtigo %></a></td>
 													<td><a href="/artigos/<%= art.CodArtigo %>"><%= art.DescArtigo %></a></td>
-													<td><%= art.STKAtual %></td>
+													<td class="text-right"><%= art.STKAtual %></td>
 												</tr>
 												<% }); %>
 											</tbody>
@@ -148,7 +148,7 @@
 												<tr>
 													<td><a href="/artigos/<%= art.CodArtigo %>"><%= art.CodArtigo %></a></td>
 													<td><a href="/artigos/<%= art.CodArtigo %>"><%= art.DescArtigo %></a></td>
-													<td><%= art.STKAtual %></td>
+													<td class="text-right"><%= art.STKAtual %></td>
 												</tr>
 												<% }); %>
 											</tbody>
@@ -209,6 +209,10 @@
 			console.log(<%- JSON.stringify(artigos) %>);
 			console.log(<%- JSON.stringify(artigosSemStock) %>);
 			console.log(<%- JSON.stringify(artigosMaxStock) %>);
+		</script>
+		
+		<script>
+			console.log(<%- JSON.stringify(artigos) %>);
 		</script>
 		<% include ../../partials/post_footer %>
 	</body>

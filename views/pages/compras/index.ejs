@@ -71,29 +71,20 @@
 										<table id="comprasTable" class="table table-striped table-bordered bulk_action">
 											<thead>
 												<tr>
-													<th class="column-title">Venda ID</th>
-													<th class="column-title">Entidade</th>
+													<th class="column-title">Compra ID</th>
 													<th class="column-title">Número Documento</th>
 													<th class="column-title">Data</th>
 													<th class="column-title">Total Mercadoria</th>
-													<th class="column-title">Linhas Documento</th>
 												</tr>
 											</thead>
 											
 											<tbody>
 												<% compras.forEach(function(com){ %>
 												<tr>
-													<td><a href="/compras/<%= com.InvoiceNo %>"><%= com.InvoiceNo %></a></td>
-													<td><a href="/fornecedores/<%= com.CustomerID %>"><%= com.CustomerID %></a></td>
-													<td><%= com.NumDoc %></td>
-													<td><%= com.InvoiceDate %></td>
-													<td><%= com.GrossTotal %></td>
-													<td>
-														<% (com.LinhasDoc).forEach(function(lin){ %>
-														<%= lin.CodArtigo %>
-														&#9866;
-														<% }); %>
-													</td>
+													<td><a href="/compras/<%= com.id %>"><%= com.id %></a></td>
+													<td class="text-right"><%= com.NumDocExterno %></td>
+													<td class="date text-right"><%= com.Data %></td>
+													<td class="text-right"><%= com.TotalMerc %> &euro;</td>
 												</tr>
 												<% }); %>
 											</tbody>
@@ -169,6 +160,9 @@
 					}
 				}
 			});
+		</script>
+		<script>
+			console.log(<%- JSON.stringify(compras) %>);
 		</script>
 		<% include ../../partials/post_footer %>
 	</body>

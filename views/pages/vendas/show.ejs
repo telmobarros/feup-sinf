@@ -75,7 +75,7 @@
 											<!-- Table row -->
 											<div class="row">
 												<div class="col-xs-12 table">
-													<table class="table table-striped">
+													<table class="table table-striped table-bordered bulk_action">
 														<thead>
 															<tr>
 																<th>Qtd</th>
@@ -88,10 +88,10 @@
 														<tbody>
 															<% (venda.LinhasDoc).forEach(function(linha){ %>
 															<tr>
-																<td><%= linha.Quantity %></td>
+																<td class="text-right"><%= linha.Quantity %></td>
 																<td><a href="/artigos/<%= linha.ProductCode %>"><%= linha.ProductCode %></a></td>
 																<td><a href="/artigos/<%= linha.ProductCode %>"><%= linha.Description %></a></td>
-																<td><%= linha.TaxPercentage %> %</td>
+																<td class="text-right"><%= linha.TaxPercentage %> %</td>
 																<td class="text-right"><%= linha.UnitPrice %> &euro;</td>
 															</tr>
 															<% }); %>
